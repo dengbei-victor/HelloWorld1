@@ -4,13 +4,26 @@
 
 using namespace std;
 
+// 使用三点求面积
+int CalTriEdgeSize(int []);
+int CalTriArea(int, int, int);
+
+int CalTriEdgeSize(int a[])
+{
+    
+}
+
 int main()
 {
-    vector<string> msg {"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
-
-    for (const string& word : msg)
+    
+    int a[3][3];
+    for (int i=0;i<3;i++)
     {
-        cout << word << " ";
+        for (int j = 0; j < 3; j++)
+        {
+            cin >> a[i];
+        }
+        
     }
     cout << endl;
 }
