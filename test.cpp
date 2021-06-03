@@ -1,33 +1,183 @@
-#include <iostream>
-#include <cmath>
-using namespace std;
+//  两数之和 暴力法
+// class Solution {
+// public:
+//     /**
+//      * 
+//      * @param numbers int整型vector 
+//      * @param target int整型 
+//      * @return int整型vector
+//      */
+//     vector<int> twoSum(vector<int>& numbers, int target) {
+//         // write code here
+//         vector<int>obj;
+//         for(int i=0;i<numbers.size();i++)
+//         {
+//             for(int j=i+1;j<numbers.size();j++)
+//             {
+//                 if(numbers[i]+numbers[j]==target)
+//                 {
+//                     if(i<j)
+//                     {
+//                         obj.push_back(i+1);
+//                         obj.push_back(j+1);
+//                     }
+//                     else
+//                     {
+//                         obj.push_back(j+1);
+//                         obj.push_back(i+1);
+//                     }
+//                 }
+                    
+//             }
+//         }
+//         return obj;
+//     }
+// };
 
-// 使用三点求面积  Sabc=1/2|x1y2-x2y1|
-int CalTriArea(int[][2]);
 
-int CalTriArea(int a[][2])
-{
-    int x1,y1,x2,y2;
-    int S;
-    x1=a[0][0]-a[1][0];
-    x2=a[2][0]-a[1][0];
-    y1=a[0][1]-a[1][1];
-    y2=a[2][1]-a[1][1];
-    S=abs(x1*y2-x2*y1)/2;
-    return S;
-}
+/**
+ * struct ListNode {
+ *	int val;
+ *	struct ListNode *next;
+ * };
+ */
 
-int main()
-{
-    int a[3][2];
-    for (int i = 0; i < 3; i++)
-    {
-        for (int j=0; j<2; j++)
-        {
-            cin >> a[i][j];
-        }
+
+
+
+///////////////// 反转链表 2021.6.1
+// /** 头插法
+//  * 
+//  * @param pHead ListNode类 
+//  * @return ListNode类
+//  */
+// struct ListNode* ReverseList(struct ListNode* pHead ) {
+//     // write code here
+//     struct ListNode *p,*q=NULL,*qHead=NULL;
+//     while(pHead!=q)
+//     {
+//         p=pHead;
+//         while(p->next!=q) p=p->next;
+//         if(qHead==NULL)
+//         { 
+//             qHead=p;
+//             q=qHead;
+//         }
+//         else
+//         {
+//             q->next=p;
+//             q=q->next;
+//             if(q==pHead)
+//                 q->next=NULL;
+//         }
+//     }
+
+//     return qHead;
+    
+// }
+
+ 
+// /** 尾插法
+//  * struct ListNode {
+//  *	int val;
+//  *	struct ListNode *next;
+//  * };
+//  */
+
+// /**
+//  * 
+//  * @param pHead ListNode类 
+//  * @return ListNode类
+//  */
+// struct ListNode* ReverseList(struct ListNode* pHead ) {
+//     // write code here
+//     struct ListNode *p,*q=NULL,*qHead=NULL,*pre=NULL;
+//     p=pHead;
+//     while(p!=NULL)
+//     {
+//         q=p;
         
-    }
-    cout << CalTriArea(a) <<endl;
-    return 0;
+//         p=p->next;
+//         q->next=pre;
+//         pre=q;
+       
+//     }
+//     return q;
+    
+// }
+
+
+/// C++ 括号匹配
+// class Solution {
+// public:
+//     /**
+//      * 
+//      * @param s string字符串 
+//      * @return bool布尔型
+//      */
+//     bool isValid(string s) {
+//         // write code here
+//         int len;
+//         stack<char> stack;
+//         len=s.size();
+//         for(int i=0;i<len;i++)
+//         {
+//             if(s[i]=='{' || s[i] == '[' || s[i] == '(')
+//             {
+//                 stack.push(s[i]);
+//             }
+//             else
+//             {
+//                 if(stack.empty())
+//                     return false;
+//                 if((stack.top()=='{' && s[i]=='}')||(stack.top()=='[' && s[i]==']')||(stack.top()=='(' && s[i]==')'))
+//                     stack.pop();
+//                 else
+//                     return false;
+//             }
+//         }
+//         if(stack.empty())
+//             return true;
+//         else 
+//             return false;
+        
+//     }
+// };
+
+
+////////  数组中出现次数超过一半的数字（暴力法）
+// /**
+//  * 
+//  * @param numbers int整型一维数组 
+//  * @param numbersLen int numbers数组长度
+//  * @return int整型
+//  */
+// int MoreThanHalfNum_Solution(int* numbers, int numbersLen ) {
+//     // write code here
+//     int max=0;
+//     int max_val=0;
+//     int count=0;
+//     for(int i=0;i<numbersLen;i++)
+//     {
+//         count =0;
+//         for(int j=0;j<numbersLen;j++)
+//         {
+//             if(numbers[j]==numbers[i])
+//             {
+//                 count++;
+//             }
+//         }
+//         if(count>max)
+//         {
+//             max = count;
+//             max_val= numbers[i];
+//         }
+//     }
+//     return max_val;
+// }
+
+#include<iostream>
+int main() {
+    stack<char> stack
+
 }
